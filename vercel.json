@@ -1,4 +1,15 @@
 {
   "buildCommand": "NODE_OPTIONS=--max-old-space-size=6144 bun run build", 
-  "installCommand": "bun install"
+  "installCommand": "bun install",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Referrer-Policy",
+          "value": "no-referrer"
+        }
+      ]
+    }
+  ]
 }
